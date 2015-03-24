@@ -1,0 +1,46 @@
+span, input, .result {
+ position: relative;
+ left: 10px;
+ font-size: 15px;
+}
+
+img {
+ float: left;
+}
+
+.header {
+ position: relative;
+ bottom: 20px;
+ top: 5px;
+}
+
+div.container {
+ clear: both;
+ margin-top: 20px;
+ float: left;
+}
+  
+.validate {
+  display: block;
+  padding: 5px;
+  color: red;
+}
+
+.result {
+  color: blue;
+}
+
+input {
+  font-size: 15px;
+}
+
+
+.button {
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: 5px;
+  	color: #d9eef7;
+        background: #0095cd;
+}

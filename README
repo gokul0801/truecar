@@ -1,0 +1,46 @@
+This project was built using Django. It uses JQuery for validating input and calling AJAX function for submitting user VSN number and displaying results.
+
+Project name is 'truecar'. App name is 'vehicles'. 
+Directory structure as follows:
+truecar/
+  truecar - contains projects settings.py and top level urls.py
+  vehicles - app directory containing models , views and urls.
+    - static  dir. for css, javascript.
+    - templates dir for HTML files.
+  read_vsn_data.py -  python script to upload the sample CVS files (with or without header).
+    It can be run as python  read_vsn_data.py -f  <csv file>.
+    This will load the patterns and vehicles data into the database.
+  vehicles.db -  sqlite database.
+
+App can be started as
+  python manage.py runserver
+  localhost:8000
+
+Sample Input:
+
+  Enter a Vehicle Serial Number  : XXRCAV222456
+  Following matching records found:
+
+    Vehicle Year: 2013, Make: Volkswagen, Model: GTI, Trim Name: 2-Door Autobahn, Trim Id: 253913
+    Vehicle Year: 2013, Make: Volkswagen, Model: GTI, Trim Name: 2-Door DSG, Trim Id: 253901
+    Vehicle Year: 2013, Make: Volkswagen, Model: GTI, Trim Name: 2-Door with Sunroof and Navigation, Trim Id: 253909
+
+  
+Since input set is small, database used is sqlite. In production environment with hundreds of thousands of records, a MySQL DB will be more efficient and faster, with the app hosted on Google App engine (GAE) or AWS. The django app can be configured to use Google Cloud SQL on GAE by using the Django database backend django.db.backends.mysql module. This will allow the app to communicate with a production Google Cloud SQL instance.  Alterative is to use django-nonrel framework with a NoSQL database like MongoDB.
+ 
+
+ 
+
+
+   
+
+       
+
+
+
+
+
+
+
+
+
